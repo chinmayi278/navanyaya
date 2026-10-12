@@ -1,0 +1,12 @@
+flask
+flask-cors
+pdfplumber
+
+# Optional ML/data-science dependencies kept out of the default runtime because
+# this demo uses simulated extraction and causal scoring instead of a real model.
+# transformers
+# torch
+# dowhy
+# causalml
+# pandas
+# numpy

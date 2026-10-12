@@ -1,0 +1,242 @@
+<!DOCTYPE reverse-html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavaNyaya | Legal Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-mesh"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="navbar float-in">
+        <div class="logo-wrap">
+            <div class="logo-mark">N</div>
+            <span class="gradient-text serif-brand">NavaNyaya</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero slide-up">
+            <div class="eyebrow">Legal Intelligence, Reimagined</div>
+            <h1>Smarter legal insight for stronger petitions.</h1>
+            <p>Analyze evidence, legal provisions, and causal weight to assess petition strength before filing.</p>
+            <div class="hero-pills">
+                <span>Evidence Mapping</span>
+                <span>Causal Review</span>
+                <span>Case Strength</span>
+            </div>
+        </header>
+
+        <div class="upload-section glass-panel slide-up delay-1">
+            <div class="drop-zone" id="drop-zone">
+                <div class="drop-icon">
+                    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </div>
+                <h3>Upload Petition PDF</h3>
+                <p>Drag and drop or browse a local file to begin review</p>
+                <input type="file" id="file-input" accept=".pdf" hidden>
+            </div>
+            <div id="upload-status" class="status-msg hidden"></div>
+        </div>
+
+        <section class="info-grid">
+            <div class="info-card glass-panel">
+                <span class="mini-label">CASE INTELLIGENCE</span>
+                <h3>Evidence-backed review</h3>
+                <p>Cross-reference provisions, factual markers, and judicial sentiment to identify the strongest legal narrative.</p>
+            </div>
+            <div class="info-card glass-panel">
+                <span class="mini-label">CAUSAL ANALYSIS</span>
+                <h3>Probability-weighted logic</h3>
+                <p>Measure how each document signal changes the likely outcome with a visible causal reasoning map.</p>
+            </div>
+            <div class="info-card glass-panel">
+                <span class="mini-label">ACTIONABLE OUTLOOK</span>
+                <h3>Timeline and risk view</h3>
+                <p>Estimate procedural complexity and expected timing using a structured, explainable legal assessment model.</p>
+            </div>
+        </section>
+
+        <section id="features" class="feature-overview glass-panel">
+            <div class="section-heading">
+                <span class="mini-label">WHY NAVANYAYA</span>
+                <h2>Built for faster, clearer legal decisions.</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">01</div>
+                    <h3>Petition Review</h3>
+                    <p>Analyze uploaded pleadings for legal provisions, factual markers, and case posture.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">02</div>
+                    <h3>Evidence Mapping</h3>
+                    <p>Highlight documents and facts that materially strengthen or weaken your grievance narrative.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">03</div>
+                    <h3>Decision Support</h3>
+                    <p>Turn raw legal material into explainable verdict signals and prioritization guidance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-copy glass-panel">
+                <span class="mini-label">ABOUT</span>
+                <h2>Designed for the modern legal workflow.</h2>
+                <p>NavaNyaya helps advocates, legal teams, and researchers turn dense petition documents into understandable signals. By combining legal extraction, evidence weighting, and causal reasoning, the platform reveals where the strongest narrative and highest-risk issues sit.</p>
+                <div class="stats-row">
+                    <div>
+                        <strong>1.2K+</strong>
+                        <span>Petitions reviewed</span>
+                    </div>
+                    <div>
+                        <strong>87%</strong>
+                        <span>Signal clarity</span>
+                    </div>
+                    <div>
+                        <strong>3x</strong>
+                        <span>Faster briefing</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual glass-panel">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <span>Case strength</span>
+                        <span class="chart-pill">+18.4%</span>
+                    </div>
+                    <div class="bars">
+                        <span style="height: 42%"></span>
+                        <span style="height: 58%"></span>
+                        <span style="height: 73%"></span>
+                        <span style="height: 88%"></span>
+                        <span style="height: 96%"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="workflow">
+            <div class="section-heading left">
+                <span class="mini-label">WORKFLOW</span>
+                <h2>From petition to insight in three steps.</h2>
+            </div>
+            <div class="workflow-grid">
+                <div class="workflow-step glass-panel">
+                    <div class="step-number">1</div>
+                    <h3>Upload</h3>
+                    <p>Drop in a petition PDF or case draft for structured review.</p>
+                </div>
+                <div class="workflow-step glass-panel">
+                    <div class="step-number">2</div>
+                    <h3>Analyze</h3>
+                    <p>Extract legal provisions and evidence markers while scoring case strength.</p>
+                </div>
+                <div class="workflow-step glass-panel">
+                    <div class="step-number">3</div>
+                    <h3>Decide</h3>
+                    <p>Review causal logic, timeline, and strategic signals before filing or briefing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner glass-panel">
+            <div>
+                <span class="mini-label">NEXT STEP</span>
+                <h2>Turn legal complexity into clarity.</h2>
+            </div>
+            <button class="cta-button">Try the dashboard</button>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-brand">
+                <span class="logo-mark">N</span>
+                <span>NavaNyaya</span>
+            </div>
+            <p>Legal intelligence for stronger petitions and smarter advocacy.</p>
+        </footer>
+
+        <div id="results-dashboard" class="results-dashboard hidden fade-in">
+            <div class="top-row">
+                <!-- Strength Score Card -->
+                <div class="card glass-panel metric-card">
+                    <h3>Case Strength Score</h3>
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <path class="circle"
+                                id="score-circle-path"
+                                stroke-dasharray="0, 100"
+                                d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831"
+                            />
+                            <text x="18" y="20.35" class="percentage" id="score-text">0%</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Extracted Entities Card -->
+                <div class="card glass-panel flex-2">
+                    <h3>Intelligent Extraction <span class="badge">InLegalBERT</span></h3>
+                    <div class="extraction-grid">
+                        <div class="extract-group">
+                            <h4>Provisions</h4>
+                            <div id="ex-provisions" class="tags"></div>
+                        </div>
+                        <div class="extract-group">
+                            <h4>Evidence Markers</h4>
+                            <div id="ex-evidence" class="tags"></div>
+                        </div>
+                        <div class="extract-group">
+                            <h4>Judicial Sentiment</h4>
+                            <div id="ex-sentiment" class="sentiment-pill">Neutral</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Causal Logic Map Table/List -->
+            <div class="card glass-panel causal-engine-card mt-4">
+                <div class="card-header">
+                    <h3>Causal Inference Logic Map <span class="badge">DoWhy</span></h3>
+                    <p class="subtitle">Showing causal probability shift (Propensity Score Matched)</p>
+                </div>
+                <div class="logic-map-container" id="logic-map">
+                    <!-- Dynamic rendering here -->
+                </div>
+            </div>
+            
+            <!-- Timeline Predictor -->
+            <div class="card glass-panel mt-4">
+                <h3>Timeline Predictor</h3>
+                <div class="timeline-bar">
+                    <div class="progress" id="timeline-progress" style="width: 0%"></div>
+                </div>
+                <p class="timeline-text" id="timeline-text">Estimating...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
