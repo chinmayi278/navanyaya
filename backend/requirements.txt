@@ -1,6 +1,7 @@
 flask
 flask-cors
 pdfplumber
+gunicorn
 
 # Optional ML/data-science dependencies kept out of the default runtime because
 # this demo uses simulated extraction and causal scoring instead of a real model.

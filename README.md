@@ -143,7 +143,18 @@ The API runs at `http://127.0.0.1:5000`.
 
 ### 4. Open the frontend
 
-Open `frontend/index.html` in a browser. The frontend sends analysis requests to the Flask API.
+Open `http://127.0.0.1:5000` after starting the backend. Flask serves both the frontend and API.
+
+## Deploy to Render
+
+The repository includes a Render Blueprint in `render.yaml`. To deploy:
+
+1. Push the project to GitHub.
+2. In Render, choose **New** → **Blueprint** and connect the NavaNyaya repository.
+3. Review the `navanyaya` web service and select **Apply**.
+4. When the first deploy finishes, open the service URL and check `/health`.
+
+The single web service serves the static frontend and petition-analysis API from the same origin. Uploaded PDFs are removed after each analysis; Render's free service uses an ephemeral filesystem, so files are not retained between requests or restarts.
 
 ## API
 

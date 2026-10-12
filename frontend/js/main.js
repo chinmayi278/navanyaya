@@ -45,34 +45,31 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        showStatus('Uploading and parsing with InLegalBERT...', 'info');
+        showStatus('Uploading and analyzing your petition...', 'info');
         
         const formData = new FormData();
         formData.append('file', file);
         
         try {
-            // Attempt to hit the Flask backend API
-            const response = await fetch('http://127.0.0.1:5000/api/analyze', {
+            const response = await fetch('/api/analyze', {
                 method: 'POST',
                 body: formData
             });
             
-            if (response.ok) {
-                const data = await response.json();
-                renderResults(data);
-            } else {
-                // If API is down or error occurs, fallback to mock data for presentation purposes
-                throw new Error('API unreachable or returned error');
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data.error || `Analysis failed (${response.status}).`);
             }
+
+            renderResults(data);
         } catch (error) {
             console.warn(error);
-            showStatus('Backend unavailable. Using demonstration mode...', 'warning');
-            
-            // Mock delay for UI effect
-            setTimeout(() => {
-                const mockData = generateMockData();
-                renderResults(mockData);
-            }, 1500);
+            showStatus(
+                error instanceof Error
+                    ? `Unable to analyze this petition: ${error.message}`
+                    : 'Unable to analyze this petition. Please try again.',
+                'error'
+            );
         }
     }
     
@@ -157,37 +154,4 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsDashboard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     
-    function generateMockData() {
-        return {
-            "status": "success",
-            "extracted_data": {
-                "evidence_markers": [
-                    "Forensic Report",
-                    "Call Detail Records"
-                ],
-                "judicial_sentiment": "Favorable",
-                "provisions": [
-                    "Section 302 IPC",
-                    "Section 438 CrPC"
-                ],
-                "text_summary": "Simulated document text..."
-            },
-            "causal_inference": {
-                "causal_logic_map": [
-                    {
-                        "causal_effect": "+22.5%",
-                        "logic": "Adding Forensic Report increases probability by 22.5%, holding judge and crime type constant (PSM match).",
-                        "marker": "Forensic Report"
-                    },
-                    {
-                        "causal_effect": "+11.2%",
-                        "logic": "Call Detail Records presence shows minor positive correlation and causal weight of 11.2%.",
-                        "marker": "Call Detail Records"
-                    }
-                ],
-                "estimated_duration_months": 18,
-                "overall_strength_score": 68.7
-            }
-        };
-    }
 });
